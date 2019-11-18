@@ -1,6 +1,6 @@
 # amazon-macie-multiaccount-setup
 
-This script automates the process of enabling Amazon Macie simultaneously across a group of AWS accounts that are in your control. (Note, that you can have one master account and up to a 10 member accounts).
+This script automates the process of enabling Amazon Macie simultaneously across a group of AWS accounts that are in your control. (Note, that you can have one master account and up to 10 member accounts).
 
 enablemacie.py will enable Macie, send handshakes from the master account and accept handshakes in all member accounts. It will also create the AWSServiceRoleForAmazonMacie in each account that Macie needs to operate. The result will be a master account that contains all security findings for all member accounts. Since Macie is regionally isolated, findings for each member account will roll up to the corresponding region in the master account. For example, the us-east-1 region in your Macie master account will contain the security findings for all us-east-1 findings from all associated member accounts.
 
