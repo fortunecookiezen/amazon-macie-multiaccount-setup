@@ -9,7 +9,7 @@ This sample code is made available under a modified MIT license. See the LICENSE
 
 ## Prerequisites
 
-* The script depends on a pre-existing role in the master account and all of the member accounts that will be linked, the role must be named AmazonMacieHandshakeRole in all accounts and the role trust relationship needs to allow the Macie service to assume the role. The AmazonMacieHandshakeRole managed poilicy (shown below) contains the required permissions for the script to succeed:
+* The script depends on a pre-existing role in the master account and all of the member accounts that will be linked, the role must be named AmazonMacieHandshakeRole in all accounts and the role trust relationship needs to allow the Macie service to assume the role. The AmazonMacieHandshakeRole managed policy (shown below) contains the required permissions for the script to succeed:
 
 ``` 
 {
@@ -32,7 +32,7 @@ This sample code is made available under a modified MIT license. See the LICENSE
 You can use the EnableMacie.yaml CloudFormation Template to automate the handshake Role creation, as the template creates only global resources it can be created in any region.  
 
 * A CSV file that includes the list of accounts and resources to be linked to the master account.  Accounts and resources should be listed one per line in the format of AccountId,BucketName. The BucketName must be in the same region you are enabling Macie.
-* Master AccountId which will recieve findings for all the linked accounts within the CSV file 
+* Master AccountId which will receive findings for all the linked accounts within the CSV file 
 
 ## Steps
 ### 1. Setup execution environment:
